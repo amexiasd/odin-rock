@@ -7,9 +7,19 @@ function computerPlay() {
 
 function readplayer() {
 let answer = prompt("Enter play:\n 1.Rock \n 2.Paper \n 3.Scissors \n");
-console.log(answer);
+	switch (answer) {
+		case 1:return 'Rock';
+			break;
+		case 2:return 'Paper';
+			break;
+		case 3:return 'Scissors';
+			break;
+
+		default:"Pleae choose!"
+	}
 }
 
 let cplay = computerPlay();
 readplayer();
 console.log(cplay);
+

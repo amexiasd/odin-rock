@@ -1,4 +1,3 @@
-
 function computerPlay() {
 	let plays = ['Rock', 'Paper', 'Scissors'];
 	let rand = Math.floor(Math.random() * plays.length);
@@ -6,20 +5,24 @@ function computerPlay() {
 }
 
 function readplayer() {
-let answer = prompt("Enter play:\n 1.Rock \n 2.Paper \n 3.Scissors \n");
+	let word = '';
+	let answer = +prompt('Enter play:\n 1.Rock \n 2.Paper \n 3.Scissors \n');
 	switch (answer) {
-		case 1:return 'Rock';
+		case 1:
+			word = 'Rock';
 			break;
-		case 2:return 'Paper';
+		case 2:
+			word = 'Paper';
 			break;
-		case 3:return 'Scissors';
+		case 3:
+			word = 'Scissors';
 			break;
-
-		default:"Pleae choose!"
+		default:
+			word = 'Please Choose!';
 	}
+
+	return word;
 }
 
 let cplay = computerPlay();
-readplayer();
-console.log(cplay);
-
+console.log(readplayer());
